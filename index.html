@@ -649,7 +649,7 @@ body.unlocked #unlockArea{opacity:0;transform:translateY(-12px) scale(.98);max-h
     </div>
   </section>
 <script>
-  (function(){
+ (function(){
   const API_BASE = 'https://serverfree-production.up.railway.app';
   const BRAND_TITLE = 'NG CHI DUC API SERVER KEY';
   const TZ = 'Asia/Ho_Chi_Minh';
@@ -752,10 +752,20 @@ body.unlocked #unlockArea{opacity:0;transform:translateY(-12px) scale(.98);max-h
           <div class="vg-label">Mã Kích Hoạt</div>
           <input id="vgKey" class="vg-input" placeholder="Dán key...">
 
-          <div class="vg-actions">
+        <div class="vg-actions">
   <button class="vg-btn vg-btn--pri" id="vgCheck">Kiểm tra</button>
-  <button class="vg-btn vg-btn--pri" id="vgActive">Kích hoạt</button>
-  <button class="vg-btn vg-btn--ghost" id="vgContact">Liên hệ mua key</button>
+
+  <button class="vg-btn vg-btn--pri" id="vgActive">
+    Kích hoạt
+  </button>
+
+  <button class="vg-btn vg-btn--ghost" id="vgGetKey">
+    Get Key Free
+  </button>
+
+  <button class="vg-btn vg-btn--ghost" id="vgContact">
+    Liên hệ mua key
+  </button>
 </div>
    
 
@@ -774,10 +784,12 @@ body.unlocked #unlockArea{opacity:0;transform:translateY(-12px) scale(.98);max-h
     $('#vgCheck').onclick = onCheck;
     $('#vgActive').onclick = onActivate;
     $('#vgContact').onclick = onContact;
-
+    $('#vgGetKey').onclick = onGetKey;
     return wrap;
   }
-
+function onGetKey(){
+  window.location.href = 'https://www.ngchiducdz.info.vn/free.html';
+}
   function setMsg(type, html){
     const box = $('#vgMsg');
     box.className = 'vg-msg '+(type||'');
@@ -786,7 +798,7 @@ body.unlocked #unlockArea{opacity:0;transform:translateY(-12px) scale(.98);max-h
   }
   
 function onContact(){
-  window.open('https://zalo.me/0396134792', '_blank');
+  window.open('https://zalo.me/0365096492', '_blank');
 }
   function updateStatus(data){
     const el = $('#vgSta');
